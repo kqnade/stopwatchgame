@@ -17,7 +17,7 @@ const score = document.getElementById("score");
 //scorelate is score late.
 // default: 5
 // 1: Easy, 10: Hard
-const srorelate = 1
+const srorelate = 10000000
 
 let time = 0;
 let timerId = null;
