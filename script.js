@@ -14,6 +14,11 @@ const stopbutton = document.getElementById("stop");
 const timer = document.getElementById("timer");
 const score = document.getElementById("score");
 
+//scorelate is score late.
+// default: 5
+// 1: Easy, 10: Hard
+const srorelate = 1
+
 let time = 0;
 let timerId = null;
 let scoreValue = 0;
@@ -44,7 +49,7 @@ function stop() {
     stoptime = new Date();
     clearInterval(timerId);
     timer.style.display = "block";
-    scoreValue = 5000 - (Math.abs((stoptime - time) - 10000) * 5);
+    scoreValue = 5000 - (Math.abs((stoptime - time) - 10000) * scorelate);
     if ( scoreValue < 0 ) {
         scoreValue = 0;
     }
