@@ -1,0 +1,38 @@
+<!-- make stopwatch game. 
+player have to stop the timer at 0.00 but cant watch the timer.
+If the error with the player's stopped time is within 10 ms, 5000 points are awarded, and for every 10 ms away from that point, 5 stores are deducted.
+make timer(show millsecoond)
+and use bulma css framework
+make start and stop button-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section is-medium">
+        <div class="container">
+            <h1 class="title">Stopwatch</h1>
+            <h2 class="subtitle">Stopwatch Game</h2>
+            <div class="box">
+                <h3 class="title is-3">Timer: <span id="timer">0.00</span></h3>
+                <h3 class="title is-3">Score: <span id="score">0</span></h3>
+                <button class="button is-primary" id="start">Start</button>
+                <button class="button is-danger" id="stop">Stop</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>2023 K4nade / Powered by Cloudflare & BulmaCSS</strong>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
