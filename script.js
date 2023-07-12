@@ -18,7 +18,7 @@ const score = document.getElementById("score");
 // damage par miliseconds
 // default: 5
 // 1: Easy, 10: Hard
-const srorelate = 5
+const scorelate = 5
 
 let time = 0;
 let timerId = null;
