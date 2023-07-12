@@ -15,9 +15,10 @@ const timer = document.getElementById("timer");
 const score = document.getElementById("score");
 
 //scorelate is score late.
+// damage par miliseconds
 // default: 5
 // 1: Easy, 10: Hard
-const srorelate = 10000000
+const srorelate = 5
 
 let time = 0;
 let timerId = null;
