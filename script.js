@@ -13,6 +13,7 @@ const startbutton = document.getElementById("start");
 const stopbutton = document.getElementById("stop");
 const timer = document.getElementById("timer");
 const score = document.getElementById("score");
+const history = document.getElementById("history");
 
 //scorelate is score late.
 // damage par miliseconds
@@ -60,5 +61,18 @@ function stop() {
     }
     score.innerText = scoreValue;
     startbutton.disabled = false;
-    stopbutton.disabled = true;
+    // add to history
+    // history table is created by bulma css framework
+    const tr = document.createElement("tr");
+    const td1 = document.createElement("td");
+    const td2 = document.createElement("td");
+    const td3 = document.createElement("td");
+    // date style is yyyy/mm/dd hh:mm:ss
+    td1.innerText = stoptime.toLocaleString();
+    td2.innerText = scoretime;
+    td3.innerText = scoreValue;
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    history.appendChild(tr);
 }
