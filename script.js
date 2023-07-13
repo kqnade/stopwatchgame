@@ -35,10 +35,14 @@ stopbutton.addEventListener("click", stop);
 // score is calculated by 
 
 function start() {
-    scoreValue = 0;
-    startbutton.disabled = true;
-    time = new Date();
-    timerId = setInterval(() => {
+  // reset old score
+  scoreValue = 0;
+  // disable startbutton
+  startbutton.disabled = true;
+  // get time
+  time = new Date();
+  //
+  timerId = setInterval(() => {
         timer.innerText = (new Date() - time) / 1000;
     }, 1);
     setTimeout(() => {
