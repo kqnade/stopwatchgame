@@ -35,6 +35,13 @@ stopbutton.addEventListener("click", stop);
 // and show score and enable start button
 // score is calculated by 
 
+window.onload = () => {
+    timer.innerText = "0.00";
+    score.innerText = "0";
+    startbutton.disabled = false;
+    stopbutton.disabled = true;
+}
+
 function start() {
   // reset old score
   scoreValue = 0;
@@ -48,16 +55,27 @@ function start() {
     }, 1);
     setTimeout(() => {
         timer.style.display = "none";
+        stopbutton.disabled = false;
     }, 1000);
 }
 
 function stop() {
     stoptime = new Date();
+    scoretime = (stoptime - time) / 1000;
     clearInterval(timerId);
     timer.style.display = "block";
+    timer.innerText = scoretime;
+    stopbutton.disabled = true;
     scoreValue = 5000 - (Math.abs((stoptime - time) - 10000) * scorelate);
-    if ( scoreValue < 0 ) {
+    if (scoretime > 1 && scoretime < 1.1) {
+        alert("How to find that?!?!\nどうやって見つけた?!");
+        alert("ok you win.\nお前の勝ちだ。");
+        scoreValue = 'Inf';
+    } else if ( scoreValue < 0 ) {
         scoreValue = 0;
+    } else if ( scoreValue = 5000 ) {
+        alert("Perfect!");
+        alert('Send me to screenshot!\nContact link is in the bottom of page.\n\n連絡リンクが下にあるのでそこから私にスクリーンショットを送ってね!')
     }
     score.innerText = scoreValue;
     startbutton.disabled = false;
