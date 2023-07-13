@@ -60,4 +60,5 @@ function stop() {
     }
     score.innerText = scoreValue;
     startbutton.disabled = false;
+    stopbutton.disabled = true;
 }
