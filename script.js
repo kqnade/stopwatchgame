@@ -73,10 +73,7 @@ function stop() {
         scoreValue = 'Inf';
     } else if ( scoreValue < 0 ) {
         scoreValue = 0;
-    } else if ( scoreValue = 5000 ) {
-        alert("Perfect!");
-        alert('Send me to screenshot!\nContact link is in the bottom of page.\n\n連絡リンクが下にあるのでそこから私にスクリーンショットを送ってね!')
-    }
+    }; 
     score.innerText = scoreValue;
     startbutton.disabled = false;
     // add to history
