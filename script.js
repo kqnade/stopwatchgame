@@ -67,10 +67,11 @@ function stop() {
     timer.innerText = scoretime;
     stopbutton.disabled = true;
     scoreValue = 5000 - (Math.abs((stoptime - time) - 10000) * scorelate);
-    if (scoretime > 1 && scoretime < 1.1) {
+    if (scoretime > 1 && scoretime < 1.5) {
         alert("How to find that?!?!\nどうやって見つけた?!");
         alert("ok you win.\nお前の勝ちだ。");
-        scoreValue = 'Inf';
+        scoreValue = '5000?';
+        scoretime = '10.00?';
     } else if ( scoreValue < 0 ) {
         scoreValue = 0;
     }; 
@@ -82,7 +83,6 @@ function stop() {
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
     const td3 = document.createElement("td");
-    // date style is yyyy/mm/dd hh:mm:ss
     td1.innerText = stoptime.toLocaleString();
     td2.innerText = scoretime;
     td3.innerText = scoreValue;
